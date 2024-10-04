@@ -116,4 +116,72 @@ foreach($ventas as $v){
     $total+=$v;
 }
 echo "<br>",$total;
+echo"<br>";
+?>
+<?php
+//ej8//
+function saludo($nombre,$ciudad,$ano){
+    echo $nombre," nacio en ",$ciudad," en el año ",$ano;
+}
+saludo("dario","granada",2002);
+echo "<br>";
+?>
+<?php
+//ej9//
+function triple($a){
+    $a=$a*3;
+    return $a;
+}
+$num=3;
+$num=triple($num);
+echo $num;
+echo "<br>";
+?>
+<?php
+//ej10//
+$n1=2;
+$n2=3;
+function area ($n1,$n2){
+    return $n1*$n2;
+}
+function perimetro ($n1,$n2){
+    return $n1*2+$n2*2;;
+}
+function changeval(&$n1,&$n2){
+    $holder=$n1;
+    $n1=$n2;
+    $n2=$holder;
+}
+changeval($n1,$n2);
+echo area($n1,$n2);
+echo "<br>";  
+echo perimetro($n1,$n2);
+echo "<br>";  
+?>
+
+<?php
+//ej11//
+$bebidas = array("Café","Té","Agua","Cerveza","Vino","Refresco","Coca-cola");
+echo "<h1>Escoja entre una de estas " ,count($bebidas), " bebidas</h1>";
+echo "<ul>";
+foreach ($bebidas as $b) {
+echo "<li>", $b, "</li>";
+}
+echo "</ul>";
+?>
+<?php
+//ej12//
+$asignaturas = array("ASGBD","ASO","EIE","HLC","IAW","SAD","SRI");
+echo "<h1>Estas son las " ,count($asignaturas), " asignaturas de ASIR 2º recorridas en un foreach</h1>";
+echo "<ul>";
+foreach ($asignaturas as $a) {
+echo "<li>", $a, "</li>";
+}
+echo "</ul>";
+echo "<h1>Estas son las " ,count($asignaturas), " asignaturas de ASIR 2º recorridas en un for</h1>";
+echo "<ul>";
+for ($i=0;$i<count($asignaturas);$i++){
+    echo "<li>", $asignaturas[$i], "</li>";
+}
+echo "</ul>";
 ?>
